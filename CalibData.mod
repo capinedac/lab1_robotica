@@ -1,0 +1,4 @@
+MODULE CalibData
+    TASK PERS tooldata Marcador_LC:=[TRUE,[[139.172,0,184.715],[0.858512728,0,0.512792254,0]],[1,[0,0,1],[1,0,0,0],0,0,0]];
+    TASK PERS wobjdata Plano45:=[FALSE,TRUE,"",[[500,462.132,212.132],[0,0,-0.382683432,0.923879533]],[[0,0,0],[1,0,0,0]]];
+ENDMODULE
