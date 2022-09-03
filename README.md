@@ -8,23 +8,23 @@ Para el proceso de fabricación de la herramienta, este se desarrolló primero f
  
 La herramienta tuvo una primera versión que fue probada, se puede visualizar en su montaje al robot articulado:
  
-![Herramienta v1](/imagenes/herramientav1.jpeg)
+![Herramienta v1](/Imagenes/herramientav1.jpeg)
  
 Su versión final diseñada es la siguiente:
  
-![Foto herramienta](/imagenes/herramienta.jpg)
-![Foto 2 herramienta](/imagenes/herramienta2.jpg)
+![Foto herramienta](/Imagenes/herramienta.jpg)
+![Foto 2 herramienta](/Imagenes/herramienta2.jpg)
  
 Y su modelo CAD obtenido fue:
  
-![CAD herramienta](/imagenes/herramientaCAD.bmp)
+![CAD herramienta](/Imagenes/herramientaCAD.bmp)
  
 Se construyó una herramienta inicial la cual se buscó desde un comienzo que su eje primitivo de diseño no se encontrara sobre el eje Z del TCP del plato portaherramientas a fin de evitar las singularidades del robot, para esto las dos primitivas de diseño empleadas fueron dos líneas coplanares que no fueran paralelas con un ángulo entre ellas de 120º.
 Además al realizar las primeras pruebas con el manipulador, se encontró que la herramienta vibraba mucho y era inestable a la hora de ser colocada sobre la superficie plana para trazar, por lo que se planteó un incremento en los  momentos de inercia que evitase el movimiento de la pieza, sin embargo como uno de los requerimientos de diseño que presentados considera el bajo peso para la reducción de cargas inerciales del robot, se planteó emplear materiales pero todos en diferentes medidas incrementaron los momentos de inercia, así que se planteó realizar una ampliación de la geometría de la zona que presentaba la mayor oscilación con materiales ligeros, de fácil consecución y simétricos, para lo cual el candidato seleccionado resultó ser un envase PET (polietilen-Tereftalato) de agua de 500ml, el cual por su peso ligero y alta resistencia mecánica al desgaste por vibraciones, entregó un gran comportamiento al mantener el bajo peso y reducir considerablemente la vibración de la herramienta.
 
 Además de la reducción de cargas inercial , el candidato PET también aportó dos funcionalidades inesperadas, la primera al tener tapa enroscable se puede crear una pieza de ensamble y desensamble cómodo sobre el manipulador que además permite la orientación de la herramienta, sin interferir con la fijación del portaherramientas ni del plato porta herramienta del manipulador IRB140. La segunda cualidad hallada es la posibilidad de aportar carga inercial al emplear el envase como un receptáculo capaz de albergar un volumen de 7 onzas aproximadamente, suficiente para emplear la herramienta de geometría definida en entornos con diversas cargas inerciales que puedan ayudar a realizar experimentos de caracterización inercial de componentes. 
  
-![plano herramienta](/imagenes/herramientaPlano.jpg)
+![plano herramienta](/Imagenes/herramientaPlano.jpg)
  
 En el diseño se cuenta con un sistema de suspensión telescópico entre el marcador y la estructura de forma que hay 40mm entre la punta del marcador y la posición de máxima retracción del elemento a fin de buscar evitar cargas sobre el manipulador robótico; está diseñado de forma predictiva ante una posible colisión, que inicialmente causaría la retracción del elemento antes de activar una pieza fusible causando la fractura de la tapa del envase con lo que la pieza se desprende del manipulador evitando posibles daños al mismo.
  
@@ -36,23 +36,23 @@ con un ajuste deslizante, lubricado por aceite SAE50, al interior del tubo de ma
 ## Desarrollo del plano de trabajo y letras
 Para el plano de trabajo, este es un tablero inclinado de dimensiones 300mm x 300mm y una inclinación de 45°, diseñado con el software Inventor. Sobre el plano que se trabaja se escribió el texto con las letras a escribir, permitiendo realizar un grabado a través de extrusión de corte de esa figura, lo que permitía contar con el perfil a seguir a través del contorno generado:
  
-![CAD plano45](/imagenes/plano45.jpg)
+![CAD plano45](/Imagenes/plano45.jpg)
  
  
  
 ## Trabajo en RobotStudio.  
 Inicialmente se genera la estación de trabajo con el robot articulado IRB 140 y su respectivo controlador RobotWare 6.13.04. Luego se procede a importar la geometría de la herramienta y ajustarla al portaherramientas:
  
-![Importar herramienta RobotStudio](/imagenes/robotStudio1.jpg)  
+![Importar herramienta RobotStudio](/Imagenes/robotStudio1.jpg)  
  
 Fue necesario hacer una modificación en cuanto a orientación y desplazamiento para un mejor ajuste, por lo que se accede a la siguiente configuración:
  
-![Ajustar herramienta RobotStudio](/imagenes/robotStudio2.jpg)  
+![Ajustar herramienta RobotStudio](/Imagenes/robotStudio2.jpg)  
  
 Luego, se continúa generando el TCP de la herramienta, para ello se crea el dato de la herramienta teniendo en cuenta la geometría de la herramienta, definiendo un desfase en X de 139.17mm, un desfase en Z de 184.72mm y una rotación sobre el eje Y de 61.7°, valores obtenido gracias a la función snap object y seleccionar la punta de la herramienta:
  
-![Creación Data Tool](/imagenes/robotStudio3.jpg)
-![Creación Data Tool 2](/imagenes/robotStudio4.jpg)  
+![Creación Data Tool](/Imagenes/robotStudio3.jpg)
+![Creación Data Tool 2](/Imagenes/robotStudio4.jpg)  
  
 Luego se importa la geometría que contiene los perfiles de las letras y se modifica orientación y posicionamiento para ubicarlo de una forma óptima y que cumpla con ubicarse en el cuadrante X+ Y+.
  
@@ -60,7 +60,7 @@ Se generan las trayectorias al seleccionar los contornos de los perfiles y se le
  
 Además se generaron 2 jointtarget para definir el home y un punto cercano al plano pero alejado, lo que permitió hacer sus respectivas rutinas agregándolas a un path de forma individual.
  
-![Creación Jointtarget](/imagenes/robotStudio5.jpg)
+![Creación Jointtarget](/Imagenes/robotStudio5.jpg)
  
  
  
@@ -69,7 +69,7 @@ Además se generaron 2 jointtarget para definir el home y un punto cercano al pl
 Tras el desarrollo del laboratorio se presentaron inconvenientes para ser completado en su totalidad, se cuenta con la simulación en RobotStudio (“SimulacionRobotStudio”) y una ejecución al aire del código (“VideoEjecucionAlAire”), vídeos alojados dentro del repositorio en la carpeta “Videos”. 
  
 Su montaje en el robot articulado IRB 140 se puede visualizar en la siguiente figura:
-![montaje](/imagenes/montaje.jpg)  
+![montaje](/Imagenes/montaje.jpg)  
  
  
 ### Código RAPID
@@ -207,4 +207,3 @@ ENDMODULE
 * La calibración manual de la herramienta con ayuda del brazo IRB 140 puede ser evitado si se cuenta con un completo y correcto modelado de la herramienta, ya que a través del software se define el TCP referente a la punta de la herramienta, sin embargo es recomendado realizar su calibración.    
 * Es importante contar con un juego en el diseño de la herramienta, pues en caso de algún choque esta se retracte y evite algún inconveniente como dañar la máquina, le herramiento o golpear algún otro elemento.
  
-
