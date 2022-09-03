@@ -36,7 +36,7 @@ con un ajuste deslizante, lubricado por aceite SAE50, al interior del tubo de ma
 ## Desarrollo del plano de trabajo y letras
 Para el plano de trabajo, este es un tablero inclinado de dimensiones 300mm x 300mm y una inclinación de 45°, diseñado con el software Inventor. Sobre el plano que se trabaja se escribió el texto con las letras a escribir, permitiendo realizar un grabado a través de extrusión de corte de esa figura, lo que permitía contar con el perfil a seguir a través del contorno generado:
  
-![CAD plano45](/Imagenes/plano45.jpg)
+![CAD plano45](/Imagenes/plano45.JPG)
  
  
  
@@ -69,7 +69,7 @@ Además se generaron 2 jointtarget para definir el home y un punto cercano al pl
 Tras el desarrollo del laboratorio se presentaron inconvenientes para ser completado en su totalidad, se cuenta con la simulación en RobotStudio (“SimulacionRobotStudio”) y una ejecución al aire del código (“VideoEjecucionAlAire”), vídeos alojados dentro del repositorio en la carpeta “Videos”. 
  
 Su montaje en el robot articulado IRB 140 se puede visualizar en la siguiente figura:
-![montaje](/Imagenes/montaje.jpg)  
+![montaje](/Imagenes/montaje.jpeg)  
  
  
 ### Código RAPID
